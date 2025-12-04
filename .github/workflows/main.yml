@@ -2,8 +2,9 @@ name: Create Pull Request and Update Content
 
 on:
   push: 
-    - main
-    - develop
+    branches:
+      - main
+      - develop
 
 jobs:
   create-pull-request:
