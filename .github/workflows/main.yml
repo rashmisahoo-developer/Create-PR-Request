@@ -1,7 +1,9 @@
 name: Create Pull Request and Update Content
 
 on:
-  workflow_dispatch: # Trigger the workflow manually
+  push: 
+    - main
+    - develop
 
 jobs:
   create-pull-request:
