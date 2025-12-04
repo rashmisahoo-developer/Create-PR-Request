@@ -33,6 +33,10 @@ jobs:
         run: |
           git config --local user.name "rashmisahoo-developer"
           git config --local user.email "rashmisahoo0108@gmail.com"
+
+          # Set the Git remote URL to include the GITHUB_TOKEN for authentication
+          git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
+          
           git add .
           git commit -m "chore: generate content and update apimartifacts"
           git push
